@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Sensor2Chart {
+	display:none;
+}
+.SensorToggleBox {
+	width:950px;
+	margin-right:auto;
+	margin-left:auto;
+	cursor:pointer;
+	line-height:40px;
+	position:relative;
+}
+.SensorChartStyle {
+	width: 950px;
+	height: 400px; 
+	margin: 0 auto;
+}
+.tempandhimrange {
+	position:relative;
+}
+#humidity_position {
+	position: absolute;
+	left: 810px;
+	top: 0px;
+	width: 150px;
+	height: 50px;
+}
+.Sensor1Chart {
+	position:relative;
+}
+#temp1rangemin {
+	position:absolute;
+	top:340px;
+	left:35px;
+	z-index:10;
+}
+#temp1rangemax {
+	position:absolute;
+	top:30px;
+	left:45px;
+	z-index:1;
+}
+#hum1rangemin {
+	position:absolute;
+	top:340px;
+	left:890px;
+	z-index:10;
+}
+#hum1rangemax {
+	position:absolute;
+	top:30px;
+	left:890px;
+	z-index:1;
+}

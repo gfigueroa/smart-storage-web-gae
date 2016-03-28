@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+.filepathword {
+	line-height:40px;
+}
+#trademarkimg {
+	min-height: 50px;
+	min-width: 50px;
+}
+.trademark{
+	height:50px;
+	width:50px;
+	position:absolute;
+	-o-transition: height .30s linear, width .30s linear;
+	-moz-transition: height .30s linear, width .30s linear;
+	-ms-transition: height .30s linear, width .30s linear;
+	-webkit-transition: height .30s linear, width .30s linear;
+	transition: height .30s linear, width .30s linear;
+	
+}
+.trademark:hover{
+	height:95px;
+	width:95px;
+	position:absolute;
+	-o-transition: height .30s linear, width .30s linear;
+	-moz-transition: height .30s linear, width .30s linear;
+	-ms-transition: height .30s linear, width .30s linear;
+	-webkit-transition: height .30s linear, width .30s linear;
+	transition: height .30s linear, width .30s linear;
+	
+}

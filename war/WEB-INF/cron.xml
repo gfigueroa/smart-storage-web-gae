@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+    
+  <cron>
+    <url>/cron?action=testing</url>
+    <description>Cron testing</description>
+    <schedule>every 24 hours</schedule>
+    <timezone>Asia/Taipei</timezone>
+  </cron>
+  
+  <cron>
+    <url>/cron?action=deleteSensorData</url>
+    <description>Delete expired sensor data</description>
+    <schedule>every day 00:00</schedule>
+    <timezone>Asia/Taipei</timezone>
+  </cron>
+  
+  <cron>
+    <url>/cron?action=deleteAlarmMessages</url>
+    <description>Delete expired alarm messages</description>
+    <schedule>every day 00:30</schedule>
+    <timezone>Asia/Taipei</timezone>
+  </cron>
+  
+  <cron>
+    <url>/cron?action=aperiodicAlarmTriggers</url>
+    <description>Check AlarmTriggers for aperiodic sensor data (door open/close)</description>
+    <schedule>every 1 minutes</schedule>
+    <timezone>Asia/Taipei</timezone>
+  </cron>
+  
+</cronentries>

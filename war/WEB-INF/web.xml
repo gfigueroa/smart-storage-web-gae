@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+version="2.5">
+
+    <!-- Sensor Data Upload servlets -->
+  	<servlet>
+	    <servlet-name>SensorDataUpload</servlet-name>
+	    <servlet-class>
+	      servlets.SensorDataUploadServlet
+	    </servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+	    <servlet-name>SensorDataUpload</servlet-name>
+	    <url-pattern>/sensorDataUpload</url-pattern>
+  	</servlet-mapping>
+  	
+  	<!-- Servlet for UConnect -->
+  	<servlet>
+	    <servlet-name>SensorDataUpload2</servlet-name>
+	    <servlet-class>
+	      servlets.SensorDataUploadServletUConnect
+	    </servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+	    <servlet-name>SensorDataUpload2</servlet-name>
+	    <url-pattern>/sensorDataUpload2</url-pattern>
+  	</servlet-mapping>
+  	
+  	<!-- Servlet for Cache testing -->
+  	<servlet>
+	    <servlet-name>SensorDataCacheUpload</servlet-name>
+	    <servlet-class>
+	      servlets.SensorDataCacheUploadServlet
+	    </servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+	    <servlet-name>SensorDataCacheUpload</servlet-name>
+	    <url-pattern>/sensorDataCacheUpload</url-pattern>
+  	</servlet-mapping>
+  	<!-- End of Sensor Data Upload servlets -->
+    
+    <!-- Session management servlets -->
+	<servlet>
+	    <servlet-name>SessionCreator</servlet-name>
+	    <servlet-class>
+	    	servlets.CreateSessionServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>SessionCreator</servlet-name>
+	    <url-pattern>/attemptLogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SessionCreator</servlet-name>
+	    	<url-pattern>/handleSession</url-pattern>
+	</servlet-mapping>
+	<!-- End of Session management   -->
+    
+    <!-- Manage Users servlet -->
+  	<servlet>
+	    <servlet-name>ManageUser</servlet-name>
+	    <servlet-class>
+	      servlets.ManageUserServlet
+	    </servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+	    <servlet-name>ManageUser</servlet-name>
+	    <url-pattern>/manageUser</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+	    <servlet-name>UserRegistration</servlet-name>
+	    <servlet-class>
+	      servlets.UserRegistrationServlet
+	    </servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+	    <servlet-name>UserRegistration</servlet-name>
+	    <url-pattern>/userRegistration</url-pattern>
+  	</servlet-mapping>
+  	<!-- End of Managing Users  -->
+    
+    <!-- Manage Customer servlets -->
+  	<servlet>
+    	<servlet-name>ManageCustomer</servlet-name>
+    	<servlet-class>
+      		servlets.ManageCustomerServlet
+    	</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ManageCustomer</servlet-name>
+    	<url-pattern>/manageCustomer</url-pattern>
+	</servlet-mapping>
+  	<!-- End of Managing Customer -->
+	
+	<!-- Manage Global Objects servlet -->
+  	<servlet>
+	    <servlet-name>ManageGlobalObject</servlet-name>
+	    <servlet-class>
+	      servlets.ManageGlobalObjectsServlet
+	    </servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+	    <servlet-name>ManageGlobalObject</servlet-name>
+	    <url-pattern>/manageGlobalObject</url-pattern>
+  	</servlet-mapping>
+  	<!-- End of Manage Global Objects  -->
+  	
+  	<!-- Manage System servlet -->
+  	<servlet>
+	    <servlet-name>ManageSystem</servlet-name>
+	    <servlet-class>
+	      servlets.ManageSystemServlet
+	    </servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+	    <servlet-name>ManageSystem</servlet-name>
+	    <url-pattern>/manageSystem</url-pattern>
+  	</servlet-mapping>
+  	<!-- End of Manage System  -->
+	
+	<!-- Serve Files and Images servlets -->
+  	<servlet>
+    	<servlet-name>FileDownload</servlet-name>
+    	<servlet-class>servlets.FileDownloadServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>FileDownload</servlet-name>
+    	<url-pattern>/fileDownload</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+    	<servlet-name>img</servlet-name>
+    	<servlet-class>servlets.ImageServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>img</servlet-name>
+    	<url-pattern>/img</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+    	<servlet-name>FileCreation</servlet-name>
+    	<servlet-class>servlets.FileCreationServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>FileCreation</servlet-name>
+    	<url-pattern>/fileCreation</url-pattern>
+  	</servlet-mapping>
+  	<!-- End of Serve Files and Images -->
+  	
+  	<!-- Servlet and mapping for REST services -->
+  	<servlet>
+    	<servlet-name>RestletServlet</servlet-name>
+    	<servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+    	<init-param>
+      		<param-name>org.restlet.application</param-name>
+      		<param-value>webservices.ExternalApplication</param-value>
+    	</init-param>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>RestletServlet</servlet-name>
+    	<url-pattern>/rest/*</url-pattern>
+  	</servlet-mapping>
+  	<!-- End of REST declarations -->
+  	
+  	<!-- Mobile App Servlets -->
+  	<servlet>
+	    <servlet-name>MobileApp</servlet-name>
+	    <servlet-class>
+	      servlets.MobileAppServlet
+	    </servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+	    <servlet-name>MobileApp</servlet-name>
+	    <url-pattern>/mobile</url-pattern>
+  	</servlet-mapping>
+  	<!-- End of Mobile App Servlets  -->
+	
+	<!-- Testing Servlets -->
+	<servlet>
+	    <servlet-name>Testing</servlet-name>
+	    <servlet-class>
+	      servlets.TestingServlet
+	    </servlet-class>
+  	</servlet>
+	<servlet-mapping>
+		<servlet-name>Testing</servlet-name>
+		<url-pattern>/testing</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>LoopTesting</servlet-name>
+	    <servlet-class>
+	      servlets.LoopTestingServlet
+	    </servlet-class>
+  	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoopTesting</servlet-name>
+		<url-pattern>/loopTest</url-pattern>
+	</servlet-mapping>
+	<!-- End Testing Servlets -->
+	
+	<!-- Email Notification Servlet -->
+	<servlet>
+	    <servlet-name>EmailNotification</servlet-name>
+	    <servlet-class>
+	      servlets.EmailNotificationServlet
+	    </servlet-class>
+  	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmailNotification</servlet-name>
+		<url-pattern>/emailNotification</url-pattern>
+	</servlet-mapping>
+	<!-- End Email Notification Servlet -->
+	
+	<!-- Cron Servlet -->
+	<servlet>
+	    <servlet-name>Cron</servlet-name>
+	    <servlet-class>
+	      servlets.CronServlet
+	    </servlet-class>
+  	</servlet>
+	<servlet-mapping>
+		<servlet-name>Cron</servlet-name>
+		<url-pattern>/cron</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+    <web-resource-collection>
+        <web-resource-name>cron</web-resource-name>
+        <url-pattern>/cron*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+        <role-name>admin</role-name>
+    </auth-constraint>
+	</security-constraint>
+	<!-- End of Cron Servlet -->
+	
+	<!-- Hide JSP extensions
+	<servlet>
+	    <servlet-name>FriendlyURLServlet</servlet-name>
+	    <servlet-class>servlets.FriendlyURLServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>FriendlyURLServlet</servlet-name>
+	    <url-pattern>/admin/*</url-pattern>
+	</servlet-mapping>
+	End of Cron Servlet -->
+	
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<error-page>
+        <error-code>500</error-code>
+        <location>/errors/servererror.jsp</location>
+    </error-page>
+	
+</web-app>

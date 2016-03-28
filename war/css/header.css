@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+#header {
+	height: 77px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #1b1b1b;
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: #999;
+	
+}
+#headerUconnect {
+	height: 77px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	/* IE10 */
+	background-image: -ms-linear-gradient(top, #C9DACA 0%, #FFFFFF 83%);
+	/* Mozilla Firefox */
+	background-image: -moz-linear-gradient(top, #C9DACA 0%, #FFFFFF 83%);
+	/* Opera */
+	background-image: -o-linear-gradient(top, #C9DACA 0%, #FFFFFF 83%);
+	/* Webkit (Safari/Chrome 10) */
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #FFFFFF), color-stop(1, #00A3EF));
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-linear-gradient(top, #C9DACA 0%, #FFFFFF 83%);
+	/* Proposed W3C Markup */
+	background-image: linear-gradient(top,#C9DACA 0%, #FFFFFF 83%);
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: #999;
+	
+}
+#header_logo {
+	background-image: url(../images/header_logo_4.jpg);
+	background-repeat: no-repeat;
+	height: 77px;
+	width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#header_logo_Uconnect {
+	background-image: url(../images/header_Uconnect.jpg);
+	background-repeat: no-repeat;
+	height: 77px;
+	width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#header_2 {
+	background-color: #323232;
+	height: 40px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	border-top-width: 1px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #404040;
+	border-bottom-color: #1c1c1c;
+}
+.header_font {
+	font-family: "微軟正黑體", "新細明體", Arial;
+	font-size: 22px;
+	color: #CCC;
+	text-decoration: none;
+}
+#home_link {
+	width:95px;
+	cursor:pointer;
+	
+}

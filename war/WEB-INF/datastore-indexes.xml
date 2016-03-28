@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+    
+    <datastore-index kind="CustomerUser" ancestor="true" source="manual">
+        <property name="customerUsers_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="DeviceModelDoor" ancestor="true" source="manual">
+        <property name="deviceModelDoors_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="DeviceModelPartition" ancestor="true" source="manual">
+        <property name="deviceModelPartitions_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="AlarmWarning" ancestor="true" source="manual">
+        <property name="alarmWarnings_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="AlarmWarningMessage" ancestor="false" source="manual">
+        <property name="storageDevice" direction="asc"/>
+        <property name="alarmWarningMessageCreationDate" direction="asc"/>
+        <property name="alarmWarningMessageStatus" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="AlarmWarningMessage" ancestor="false" source="manual">
+        <property name="alarmWarningMessageStatus" direction="asc"/>
+        <property name="storageDevice" direction="asc"/>
+        <property name="alarmWarningMessageCreationDate" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="AlarmWarningMessage" ancestor="false" source="manual">
+        <property name="storageDevice" direction="asc"/>
+        <property name="alarmWarningMessageCreationDate" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="AlarmWarningMessage" ancestor="true" source="manual">
+        <property name="alarmWarningMessages_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="AlarmTrigger" ancestor="true" source="manual">
+        <property name="alarmTriggers_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="AlarmTriggerMessage" ancestor="true" source="manual">
+        <property name="alarmTriggerMessages_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="AlarmTriggerMessage" ancestor="false" source="manual">
+        <property name="storageDevice" direction="asc"/>
+        <property name="alarmTriggerMessageStatus" direction="asc"/>
+        <property name="alarmTriggerMessageCreationDate" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="AlarmWarningStorageDevice" ancestor="true" source="manual">
+        <property name="alarmWarningStorageDevices_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Region" ancestor="true" source="manual">
+        <property name="regions_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="SensorInstance" ancestor="true" source="manual">
+        <property name="sensorInstances_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="SensorReading" ancestor="true" source="manual">
+        <property name="sensorReadings_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="SensorReading" ancestor="false" source="manual">
+        <property name="parentKey" direction="asc"/>
+        <property name="sensorReadingTime" direction="desc"/>
+    </datastore-index>
+    
+    <datastore-index kind="SensorReadingCache" ancestor="false" source="manual">
+        <property name="parentKey" direction="asc"/>
+        <property name="sensorReadingTime" direction="desc"/>
+    </datastore-index>
+    
+    <datastore-index kind="StorageDevice" ancestor="false" source="manual">
+        <property name="deviceModel" direction="asc"/>
+        <property name="storageDeviceNickname" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="StorageDevice" ancestor="true" source="manual">
+        <property name="storageDevices_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="StorageDevice" ancestor="false" source="manual">
+        <property name="deviceModel" direction="asc"/>
+        <property name="storageDeviceNickname" direction="asc"/>
+        <property name="storageDeviceSerialNumber" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="StorageDeviceContainer" ancestor="true" source="manual">
+        <property name="storageDeviceContainers_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="StorageDeviceDoor" ancestor="true" source="manual">
+        <property name="storageDeviceDoors_INTEGER_IDX" direction="asc"/>
+    </datastore-index> 
+    
+    <datastore-index kind="StorageDevicePartition" ancestor="true" source="manual">
+        <property name="storageDevicePartitions_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="StorageItem" ancestor="true" source="manual">
+        <property name="storageItems_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="StorageItemInstance" ancestor="true" source="manual">
+        <property name="storageItemInstances_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="StorageItemTransaction" ancestor="true" source="manual">
+        <property name="storageItemTransactions_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="StorageItemTransaction" ancestor="false" source="manual">
+        <property name="storageItemInstance" direction="asc"/>
+        <property name="storageDevicePartition" direction="asc"/>
+        <property name="storageItemTransactionCreationDate" direction="desc"/>
+    </datastore-index>
+    
+</datastore-indexes>
