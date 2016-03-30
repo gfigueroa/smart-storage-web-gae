@@ -20,7 +20,7 @@ Engineers and designers at SMASRV
 
 ## Directory Structure
 
-    ArtMeGo_API_Tornado/
+    iStorage/
         src/
 			datastore/
 			exceptions/
